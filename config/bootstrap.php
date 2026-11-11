@@ -1,5 +1,6 @@
 <?php
 declare(strict_types=1);
+
 define('MB_ROOT', dirname(__DIR__));
 
 function mb_load_env(string $path): void {
@@ -40,8 +41,11 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     $secure = filter_var(getenv('SESSION_SECURE') ?: 'false', FILTER_VALIDATE_BOOL);
     session_name(getenv('SESSION_NAME') ?: 'MB_SESS');
     session_set_cookie_params([
-        'lifetime' => 0, 'path' => '/', 'domain' => '',
-        'secure' => $secure, 'httponly' => true,
+        'lifetime' => 0,
+        'path'     => '/',
+        'domain'   => '',
+        'secure'   => $secure,
+        'httponly' => true,
         'samesite' => getenv('SESSION_SAMESITE') ?: 'Lax',
     ]);
     ini_set('session.use_strict_mode', '1');
@@ -54,3 +58,6 @@ require MB_ROOT . '/includes/csrf.php';
 require MB_ROOT . '/includes/db.php';
 require MB_ROOT . '/includes/auth.php';
 require MB_ROOT . '/includes/brand.php';
+require MB_ROOT . '/includes/validation.php';
+require MB_ROOT . '/includes/rate_limit.php';
+require MB_ROOT . '/includes/mailer.php';
