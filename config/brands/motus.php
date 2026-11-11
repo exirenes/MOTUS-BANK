@@ -1,0 +1,33 @@
+<?php
+return [
+    'name'          => 'MOTUS BANK',
+    'short_name'    => 'MOTUS',
+    'tagline'       => 'Banking, in motion.',
+    'description'   => 'A modern, lightweight banking experience.',
+    'domain'        => 'motusbank.ink',
+    'support_email' => 'support@motusbank.ink',
+    'support_phone' => '+1 (000) 000-0000',
+    'colors' => [
+        'primary'   => '#0A4DA6',
+        'secondary' => '#FFFFFF',
+        'accent'    => '#0B1F3A',
+        'success'   => '#1E8E5A',
+        'warning'   => '#C78600',
+        'danger'    => '#C0392B',
+        'text'      => '#0F172A',
+        'muted'     => '#64748B',
+        'border'    => '#E2E8F0',
+        'surface'   => '#F8FAFC',
+    ],
+    'logo'     => '/public/images/logo.svg',
+    'favicon'  => '/public/images/favicon.svg',
+    'icon_192' => '/public/icons/icon-192.png',
+    'icon_512' => '/public/icons/icon-512.png',
+    'manifest' => [
+        'theme_color'      => '#0A4DA6',
+        'background_color' => '#FFFFFF',
+        'display'          => 'standalone',
+        'orientation'      => 'portrait',
+        'start_url'        => '/',
+    ],
+];

@@ -1,0 +1,27 @@
+Options -Indexes
+DirectoryIndex index.php
+
+RedirectMatch 403 ^/config(/|$)
+RedirectMatch 403 ^/includes(/|$)
+RedirectMatch 403 ^/database(/|$)
+RedirectMatch 403 ^/logs(/|$)
+RedirectMatch 403 ^/bin(/|$)
+RedirectMatch 403 ^/templates(/|$)
+RedirectMatch 403 ^/\.git(/|$)
+RedirectMatch 403 ^/\.env
+RedirectMatch 403 \.(sql|log|md|env|ini|bak)$
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+<IfModule mod_php.c>
+    php_flag display_errors off
+    php_value upload_max_filesize 5M
+    php_value post_max_size 8M
+    php_value session.cookie_httponly 1
+    php_value session.use_strict_mode 1
+</IfModule>

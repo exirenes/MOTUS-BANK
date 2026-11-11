@@ -1,0 +1,33 @@
+<?php
+return [
+    'name'          => 'ACME BANK',
+    'short_name'    => 'ACME',
+    'tagline'       => 'Simple. Secure. Yours.',
+    'description'   => 'ACME BANK digital accounts.',
+    'domain'        => 'acmebank.example',
+    'support_email' => 'help@acmebank.example',
+    'support_phone' => '+1 (000) 111-1111',
+    'colors' => [
+        'primary'   => '#7A1FA2',
+        'secondary' => '#FFFFFF',
+        'accent'    => '#2A0A3D',
+        'success'   => '#1E8E5A',
+        'warning'   => '#C78600',
+        'danger'    => '#C0392B',
+        'text'      => '#111827',
+        'muted'     => '#6B7280',
+        'border'    => '#E5E7EB',
+        'surface'   => '#F9FAFB',
+    ],
+    'logo'     => '/public/images/logo-acme.svg',
+    'favicon'  => '/public/images/favicon-acme.svg',
+    'icon_192' => '/public/icons/acme-192.png',
+    'icon_512' => '/public/icons/acme-512.png',
+    'manifest' => [
+        'theme_color'      => '#7A1FA2',
+        'background_color' => '#FFFFFF',
+        'display'          => 'standalone',
+        'orientation'      => 'portrait',
+        'start_url'        => '/',
+    ],
+];
